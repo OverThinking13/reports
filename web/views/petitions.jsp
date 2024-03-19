@@ -64,11 +64,11 @@
                     List<Petition> petitions;
                     final boolean isFormed = (request.getParameter("type")).equals("formed");
                     if (isFormed) {
-                        out.print(PetitionRepository.russianDate(Settings.getInstance().getFormed().getFileTime()));
                         petitions = Model.getPetitionsFormed();
+                        out.print(PetitionRepository.russianDate(Settings.getInstance().getFormed().getFileTime()));
                     } else {
-                        out.print(PetitionRepository.russianDate(Settings.getInstance().getApproved().getFileTime()));
                         petitions = Model.getPetitionsApproved();
+                        out.print(PetitionRepository.russianDate(Settings.getInstance().getApproved().getFileTime()));
                     }
                 %>
             </div>
